@@ -70,6 +70,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_DISABLE_OTA_MENU=1
         # no additional check for MIUI props
         export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
+        export OF_FORCE_DATA_FORMAT_F2FS=1
+        export OF_FLASHLIGHT_ENABLE=1
 
         # Screen Settings
         export OF_CLOCK_POS=1
@@ -83,7 +85,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         # R12.1 Settings
         export FOX_VERSION="R12.1"
         export OF_MAINTAINER="AmritoRock"
-        export FOX_BUILD_TYPE="Stable"
+        export FOX_BUILD_TYPE="fbev2"
 	export FOX_VARIANT="$(date '+%Y%m%d-%H%M')"
 
         # run a process after formatting data to recreate /data/media/0 
